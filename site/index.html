@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>OnlineOTP - SeuthD3</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="js/jsQR.min.js"></script>
+    <script src="js/argon2.min.js"></script>
+    <script src="js/papaparse.min.js"></script>
+    <script src="js/otplib.min.js"></script>
+  </head>
+  <body>
+    <dialog id="newDialog" popover>
+      <button id="newManual">Manual</button>
+      <button id="newFromQR">From QR Code</button>
+      <button id="newFromURI">From URI</button>
+      <button id="newFromFile">From File</button>
+    </dialog>
+    <nav id="topBar">
+      <button id="newButton" popovertarget="newDialog">
+        <svg width="18px" height="18px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="2" width="44" height="44" rx="10" fill="none" stroke="currentColor" stroke-width="4" />
+          <line x1="12" y1="24" x2="36" y2="24" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+          <line x1="24" y1="12" x2="24" y2="36" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+        </svg>
+        <a>New</a>
+      </button>
+    </nav>
+    <span id="entries">
+    </span>
+    <script src="js/main.mjs" type="module"></script>
+  </body>
+</html>

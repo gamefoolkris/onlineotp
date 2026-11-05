@@ -1,0 +1,10 @@
+{
+  "name": "onlineotp",
+  "private": false,
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^5.3.0"
+  }
+}
