@@ -4,10 +4,25 @@
     <meta charset="UTF-8" />
     <title>OnlineOTP - SeuthD3</title>
     <link rel="stylesheet" href="styles/main.css" />
-    <script src="js/jsQR.min.js"></script>
-    <script src="js/argon2.min.js"></script>
-    <script src="js/papaparse.min.js"></script>
-    <script src="js/otplib.min.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "jsqr": "./modules/jsqr/index.js",
+          "papaparse": "./modules/papaparse/index.js",
+          "otplib": "./modules/otplib/index.js",
+          "@otplib/core": "./modules/@otplib/core/index.js",
+          "@otplib/hotp": "./modules/@otplib/hotp/index.js",
+          "@otplib/totp": "./modules/@otplib/totp/index.js",
+          "@otplib/uri": "./modules/@otplib/uri/index.js",
+          "@otplib/plugin-base32-scure": "./modules/@otplib/plugin-base32-scure/index.js",
+          "@otplib/plugin-crypto-noble": "./modules/@otplib/plugin-crypto-noble/index.js",
+          "@scure/base": "./modules/@scure/base/index.js",
+          "@noble/hashes/": "./modules/@noble/hashes/",
+          "hash-wasm": "./modules/hash-wasm/index.js",
+          "argon2": "./modules/argon2/index.js"
+        }
+      }
+    </script>
   </head>
   <body>
     <dialog id="newDialog" popover>
@@ -28,6 +43,6 @@
     </nav>
     <span id="entries">
     </span>
-    <script src="js/main.mjs" type="module"></script>
+    <script type="module" src="js/main.mjs"></script>
   </body>
 </html>
